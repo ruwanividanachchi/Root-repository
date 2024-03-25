@@ -29,7 +29,7 @@ const renderLink = (li, id) => {
     a.innerHTML = '<i style="float: right" class="bi bi-trash"></i>';
     a.addEventListener('click', (event) => {
         todos.removeTask(id).then((remove_id) => {
-            const li_to_remove = document.querySelector(`[data_key='${remove_id}']`);
+            const li_to_remove = document.querySelector(`[data-key='${remove_id}']`);
             if(li_to_remove){
                 list.removeChild(li_to_remove);
             }
